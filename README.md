@@ -12,10 +12,11 @@
 
 </ol>
 
-The PRIM module is available on PyPI and can be installed using `easy_install`:
+The project uses the following Python packages: 
+NetworkX is a Python package for the creation, manipulation, and study of the structure, dynamics, and functions of complex networks. `NetworkX`:
 
-    easy_install prim
+    networkx as nx
     
-or PIP:
+Matplotlib is a comprehensive library for creating static, animated, and interactive visualizations in Python. `matplotlib.pyplot`:
 
-    pip install prim
+    matplotlib.pyplot as plt
