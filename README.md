@@ -11,12 +11,15 @@
 <li>Repeat step 3 until all vertices have been connected</li>
 
 </ol>
-
+----------------------------------------------------------------------------------------------------------------------
 The project uses the following Python packages: 
 NetworkX is a Python package for the creation, manipulation, and study of the structure, dynamics, and functions of complex networks. `NetworkX`:
 
     networkx as nx
     
+----------------------------------------------------------------------------------------------------------------------
 Matplotlib is a comprehensive library for creating static, animated, and interactive visualizations in Python. `matplotlib.pyplot`:
 
     matplotlib.pyplot as plt
+    
+    ----------------------------------------------------------------------------------------------------------------------
