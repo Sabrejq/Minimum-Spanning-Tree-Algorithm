@@ -27,3 +27,47 @@ Matplotlib is a comprehensive library for creating static, animated, and interac
     
     
 ----------------------------------------------------------------------------------------------------------------------
+
+<h3> Usage </h3>
+----
+
+```python
+import networkx as nx
+from algorithms.prims import Prims
+
+G_one = nx.read_weighted_edgelist('data/G1.txt', nodetype = int)
+G_two = nx.read_weighted_edgelist('data/G2.txt', nodetype = int)
+G_three = nx.read_weighted_edgelist('data/G3.txt', nodetype = int)
+
+
+T = Prims(G_one, 0, True, True)
+
+```
+<p> You can change the values inside T to get the result you want. The argumets are G, the text file with the info, the starting node, True/False if you wasnt to display a graph, True/False if you want the graph info</p>
+
+```python
+def Prims(G, starting_node = 0, draw = False, attrib = False):
+    T = nx.Graph();
+    T.add_node(starting_node)
+    
+    if draw == True:
+        draw_subtree(G, T)
+        
+    while set(T.nodes()) != set(G.nodes()):
+        e = min_valid_edge(G, T)
+        T.add_edge(e[0], e[1], weight = cost(G, e))
+        if draw == True:
+            draw_subtree(G, T)
+            
+    if attrib == True:
+        total_cost = sum(cost(G, e) for e in T.edges())
+        print('')
+        print('-------------- Properties of the Tree T --------------')
+        print('-----------------------------------------------------')
+        print(f'V(T) = {list(T.nodes())} ')
+        print(f'E(T) = {list(T.edges())} ')
+        print(f'Total Cost = {total_cost}')
+        print('-----------------------------------------------------')
+        
+    return T
+```
