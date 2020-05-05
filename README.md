@@ -11,3 +11,11 @@
 <li>Repeat step 3 until all vertices have been connected</li>
 
 </ol>
+
+The PRIM module is available on PyPI and can be installed using `easy_install`:
+
+    easy_install prim
+    
+or PIP:
+
+    pip install prim
