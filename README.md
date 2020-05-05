@@ -11,6 +11,7 @@
 <li>Repeat step 3 until all vertices have been connected</li>
 
 </ol>
+
 ----------------------------------------------------------------------------------------------------------------------
 
 The project uses the following Python packages: 
