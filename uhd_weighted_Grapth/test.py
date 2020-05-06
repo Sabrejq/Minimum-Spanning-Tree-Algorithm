@@ -8,3 +8,7 @@ G_two = nx.read_weighted_edgelist('data/G2.txt', nodetype = int)
 G_three = nx.read_weighted_edgelist('data/G3.txt', nodetype = int)
 
 Prims(G_one, 0, True, True)
+
+Prims(G_one, 0, False, True)
+
+Prims(G_one, 0, True, False)
